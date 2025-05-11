@@ -10,7 +10,8 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -19,7 +20,6 @@ const pages = [
    { "My City": "city" },
    { Future: "future" },
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
    const [anchorElNav, setAnchorElNav] = useState(null);
@@ -44,7 +44,7 @@ function ResponsiveAppBar() {
    <AppBar position="static" sx={{ backgroundColor: "#ff9800" }}>
       <Container maxWidth="xl">
          <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+            <RocketLaunchIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
             <Typography
                variant="h6"
                noWrap
@@ -60,7 +60,7 @@ function ResponsiveAppBar() {
                   textDecoration: "none",
                }}
             >
-               LOGO
+               MyPROJECT
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -115,7 +115,7 @@ function ResponsiveAppBar() {
                   })}
                </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+            <RocketLaunchIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
             <Typography
                variant="h5"
                noWrap
@@ -132,7 +132,7 @@ function ResponsiveAppBar() {
                   textDecoration: "none",
                }}
             >
-               LOGO
+               MyPROJECT
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
                {pages.map((page, i) => {
@@ -154,19 +154,19 @@ function ResponsiveAppBar() {
                })}
             </Box>
             <Box sx={{ flexGrow: 0 }}>
-               <Tooltip title="Open settings">
-                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+               
+                  <IconButton >
                      <Avatar
                         alt="avatar"
                         src="https://avatars.githubusercontent.com/u/162782787?u=90b2fa42853186424c4b80ca44613f8a3753fff7&v=4"
                      />
                   </IconButton>
-               </Tooltip>
+               
                <Menu
                   sx={{
                      mt: "45px",
                      "& .MuiPaper-root": {
-                        backgroundColor: "#ffe0b2", // дуже світлий оранжевий
+                        backgroundColor: "#ffe0b2", 
                      },
                   }}
                   id="menu-appbar"
@@ -183,13 +183,7 @@ function ResponsiveAppBar() {
                   open={Boolean(anchorElUser)}
                   onClose={handleCloseUserMenu}
                >
-                  {settings.map((setting) => (
-                     <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                        <Typography sx={{ textAlign: "center" }}>
-                           {setting}
-                        </Typography>
-                     </MenuItem>
-                  ))}
+                
                </Menu>
             </Box>
          </Toolbar>

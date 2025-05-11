@@ -30,7 +30,9 @@ return (
          py: 5,
          px: 2,
          minHeight: "100vh",
+          background: "#fcefdc"
       }}
+      
    >
       <Typography
          variant="h4"
@@ -38,7 +40,7 @@ return (
          gutterBottom
          sx={{ fontWeight: "bold", color: "#e65100" }} // насичений оранжевий
       >
-         Моє місто — Стара Вижівка
+         Стара Вижівка - це там, де я народився
       </Typography>
 
       <Grid container spacing={4} justifyContent="center">

@@ -41,7 +41,7 @@ const StepsToDream = () => {
             align="center"
             sx={{
                fontWeight: "bold",
-               color: "#e65100", // темно-помаранчевий
+               color: "#e65100", 
                mb: 5,
             }}
          >
